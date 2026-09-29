@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="box_controle-pedido">
+        <h1>Controle de Pedidos</h1>
+        <section>
+            <h2>Novo Pedido</h2>
+            <label for="cliente">Cliente</label>
+            <input type="text" name="cliente" id="cliente">
+            <h3>Produtos</h3>
+            <div id="listaProdutos">
+                <!--Lista de Produtos-->
+            </div>
+            <button id="btnAdicionarProduto">Adicionar Produto</button>
+        </section>
+
+        <section>
+            <div id="itensPedido"></div>
+            
+            Total: R$ <div id="valorTotal"></div>
+        </section>
+
+
+
+        <button id="btnEnviarPedido">Enviar Pedido</button>
+
+    </main>
+
+
+
+<script type="module" src="js/app.js"></script>
+
+</body>
+</html>
