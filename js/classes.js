@@ -31,5 +31,38 @@ export class Pedido{
     }
     
 
+    adicionarProduto(produto){
+        const item = new ItemPedido(
+            this.num_pedido,
+            produto.id_produto,
+            1
+        );
+        this.#itens_pedido.push(item)
+
+    }
+    deleteProduto(){
+
+    }
+    atualizarQuantidade(){
+
+    }
+    calcularTotal(produtos){
+        return this.#itens_pedido.reduce((acumulador, item) => {
+            const produto = produtos.find((produto)=>{
+                return produto.id_produto === item.id_produto;
+            })
+            return acumulador + (produto.preco*item.qtd_produto);
+        }, 0)
+       }
+
+    buscarProdutos(){
+
+    }
 
 }
+const pizza = new Produto(1, "Pizza", 30);
+const refrigerante = new Produto(2, "Refrigerante", 8);
+
+const cliente = new Cliente(1, "João");
+
+const pedido = new Pedido(1, cliente.id_cliente);
